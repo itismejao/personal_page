@@ -7,9 +7,9 @@ class FeaturedTiles extends StatelessWidget {
   final Size screenSize;
 
   final List<String> assets = [
-    'images/desktop.jpg',
-    'images/mobile.jpg',
-    'images/web.jpg',
+    'assets/images/desktop.jpg',
+    'assets/images/mobile.jpg',
+    'assets/images/web.jpg',
   ];
 
   final List<String> title = ['Desktop', 'Mobile', 'Web'];

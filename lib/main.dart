@@ -1,8 +1,11 @@
+import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
 import 'package:explore/home_page.dart';
+import 'package:explore/utils/theme_data.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  
+  runApp(EasyDynamicThemeWidget(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -13,9 +16,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'CRE8 CODE',
-      theme: ThemeData(
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      theme: lightThemeData,
+      darkTheme: darkThemeData,
+      debugShowCheckedModeBanner: false,
+      themeMode: EasyDynamicTheme.of(context).themeMode,
+      // theme: ThemeData(
+      //   visualDensity: VisualDensity.adaptivePlatformDensity,
+      // ),
       home: HomePage(),
     );
   }

@@ -17,12 +17,12 @@ class _FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
   List _isHovering = [false, false, false, false];
   List<Widget> rowElements = [];
 
-  List<String> items = ['Destination', 'Dates', 'People', 'Experience'];
+  List<String> items = ['Portfólio', 'Orçamento', 'Team', 'Empresas'];
   List<IconData> icons = [
-    Icons.location_on,
-    Icons.date_range,
+    Icons.cases_sharp,
+    Icons.attach_money,
     Icons.people,
-    Icons.wb_sunny
+    Icons.store
   ];
 
   List<Widget> generateRowElements() {
@@ -41,8 +41,8 @@ class _FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
           items[i],
           style: TextStyle(
             color: _isHovering[i]
-                ? Colors.blue.shade200
-                : Colors.black,
+                ? Theme.of(context).primaryTextTheme.button!.decorationColor
+                : Theme.of(context).primaryTextTheme.button!.color,
           ),
         ),
       );
